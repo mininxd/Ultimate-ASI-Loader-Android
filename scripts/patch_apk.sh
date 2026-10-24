@@ -22,7 +22,6 @@ if [ ! -d "$UNPACKED_DIR" ]; then
 fi
 
 mkdir -p "${UNPACKED_DIR}/lib/armeabi-v7a"
-mkdir -p "${UNPACKED_DIR}/lib/arm64-v8a"
 
 if [ -n "$SO_INPUT" ] && [ "$SO_INPUT" != "--build-only" ]; then
     if [ -d "$SO_INPUT" ]; then
@@ -30,7 +29,7 @@ if [ -n "$SO_INPUT" ] && [ "$SO_INPUT" != "--build-only" ]; then
             echo "Installing armeabi-v7a library..."
             cp "${SO_INPUT}/armeabi-v7a/libASILoader.so" "${UNPACKED_DIR}/lib/armeabi-v7a/"
         fi
-        if [ -f "${SO_INPUT}/arm64-v8a/libASILoader.so" ]; then
+        if [ -f "${SO_INPUT}/arm64-v8a/libASILoader.so" ] && [ -f "${UNPACKED_DIR}/lib/arm64-v8a/libGTASA.so" ]; then
             echo "Installing arm64-v8a library..."
             cp "${SO_INPUT}/arm64-v8a/libASILoader.so" "${UNPACKED_DIR}/lib/arm64-v8a/"
         fi
