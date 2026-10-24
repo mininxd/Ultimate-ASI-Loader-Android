@@ -62,7 +62,6 @@ artifacts/
 # Android Modding & Local Build Artifacts
 *.apk
 *.idsig
-*.jks
 *.keystore
 gtasa_unpacked/
 dist/
