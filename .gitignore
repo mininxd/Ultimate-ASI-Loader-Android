@@ -63,6 +63,7 @@ artifacts/
 *.apk
 *.idsig
 *.keystore
+downloaded_artifacts/
 gtasa_unpacked/
 dist/
 build/
