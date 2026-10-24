@@ -58,6 +58,17 @@ artifacts/
 *_p.c
 *_i.h
 *.ilk
+
+# Android Modding & Local Build Artifacts
+*.apk
+*.idsig
+*.jks
+*.keystore
+gtasa_unpacked/
+dist/
+build/
+libs/
+obj/
 *.meta
 *.obj
 *.pch
